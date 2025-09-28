@@ -9,7 +9,7 @@
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <span class="text-accent font-mono text-xl font-bold">CodeHaven</span>
+            <span class="text-accent font-mono text-xl font-bold">CommercialSky1174</span>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">

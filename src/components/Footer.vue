@@ -5,7 +5,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 class="text-lg font-bold text-white mb-4">CodeHaven</h3>
+          <h3 class="text-lg font-bold text-white mb-4">CommercialSky1174</h3>
           <p class="text-gray-400">
             A portal for creative collaborations and technical innovation.
           </p>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
-        <p>© 2023 CodeHaven Portal. All rights reserved.</p>
+        <p>© 2023 CommercialSky1174 Portal. All rights reserved.</p>
       </div>
     </div>
   </footer>

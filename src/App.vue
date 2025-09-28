@@ -1,15 +1,21 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 import Navigation from "./components/Navigation.vue";
 import Footer from "./components/Footer.vue";
 
-const vanta = ref(null);
+// Vanta
+import NET from "vanta/dist/vanta.net.min";
+import * as THREE from "three";
+import feather from "feather-icons";
+
+const vantaRef = ref(null);
+let vantaEffect = null;
 
 onMounted(() => {
   // Initialize Vanta.js background
-  console.log(vanta.value)
-  VANTA.NET({
-    el: vanta.value,
+  vantaEffect = NET({
+    el: vantaRef.value,
+    THREE,
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
@@ -23,11 +29,31 @@ onMounted(() => {
     maxDistance: 22.0,
     spacing: 18.0,
   });
+
+  // Replace feather icons
+  feather.replace();
+
+  // Animate progress bar
+  const progressBar = document.querySelector(".progress-bar");
+  let width = 0;
+  const targetWidth = 65;
+  const interval = setInterval(() => {
+    if (width >= targetWidth) {
+      clearInterval(interval);
+    } else {
+      width++;
+      progressBar.style.width = width + "%";
+    }
+  }, 20);
+});
+
+onBeforeUnmount(() => {
+  if (vantaEffect) vantaEffect.destroy();
 });
 </script>
 
 <template>
-  <div ref="vanta" id="vanta-bg"></div>
+  <div ref="vantaRef" id="vanta-bg"></div>
 
   <Navigation />
 
